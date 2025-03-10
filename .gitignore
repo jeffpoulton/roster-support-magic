@@ -42,4 +42,7 @@ out/
 /playwright/.cache/
 
 # Project specific
-/docs/ 
+/docs/
+
+# Fly.io
+fly.toml 
