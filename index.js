@@ -303,7 +303,8 @@ app.get('/scrape', async (req, res) => {
     return res.send(formattedTranscript);
 
   } catch (error) {
-    throw error;
+    console.error('Error scraping transcript:', error);
+    return res.status(500).json({ error: error.message });
   } finally {
     if (browser) {
       await browser.close();
